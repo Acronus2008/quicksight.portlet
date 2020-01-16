@@ -14,8 +14,8 @@
 			<mime-type>text/html</mime-type>
 		</supports>
 		<portlet-info>
-			<title>com.mycompany.my.primefaces.portlet</title>
-			<short-title>com.mycompany.my.primefaces.portlet</short-title>
+			<title>QuickSight DashBoard</title>
+			<short-title>QuickSight Dashboard embeded</short-title>
 			<keywords>com.mycompany.my.primefaces.portlet</keywords>
 		</portlet-info>
 		<security-role-ref>
