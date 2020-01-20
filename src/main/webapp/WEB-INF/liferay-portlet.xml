@@ -3,7 +3,7 @@
 
 <liferay-portlet-app>
 	<portlet>
-		<portlet-name>com.mycompany.my.primefaces.portlet</portlet-name>
+		<portlet-name>quicksight.portlet</portlet-name>
 		<icon>/resources/images/icon.png</icon>
 		<requires-namespaced-parameters>false</requires-namespaced-parameters>
 		<ajaxable>false</ajaxable>

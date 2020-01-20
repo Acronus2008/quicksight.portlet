@@ -1,21 +1,58 @@
 <?xml version="1.0"?>
 
-<f:view
-	xmlns="http://www.w3.org/1999/xhtml"
+<f:view xmlns="http://www.w3.org/1999/xhtml"
 	xmlns:f="http://xmlns.jcp.org/jsf/core"
 	xmlns:h="http://xmlns.jcp.org/jsf/html"
-	xmlns:p="http://primefaces.org/ui"
->
+	xmlns:p="http://primefaces.org/ui">
 	<h:head>
 		<h:outputStylesheet library="css" name="main.css" />
 	</h:head>
 	<h:body>
-	<h:form prependId="false">
-	    <p:fieldset legend="Quicksight Dashboard Demo" style="margin-bottom:20px">
-	        <iframe src="#{mainBean.embbededUrl}" width="550px;" height="775px;" /> 
-	    </p:fieldset>
-	</h:form>
-		
-		
+		<h:form prependId="false">
+			<div class="p-grid">
+				<div class="p-col-12 ">
+					<h:panelGrid columns="3" style="margin-bottom:10px;"
+						cellpadding="5">
+						<p:outputLabel for="@next" value="Tipos de Dashboard" />
+						<p:selectOneMenu id="dashboardSelect"
+							value="#{mainBean.dashBoardSelected}">
+							<f:selectItem itemLabel="Seleccionar" itemValue="" />
+							<f:selectItems value="#{mainBean.dashboards}" var="dash"
+								itemValue="#{dash.dashboardId}"
+								itemLabel="#{dash.dashboardType}" />
+							<p:ajax listener="#{mainBean.loadDashboardData}"
+								update="dashBoardPanelView"></p:ajax>
+						</p:selectOneMenu>
+						<p:ajaxStatus>
+							<f:facet name="start">
+								<i class="pi pi-spin pi-spinner" style="font-size: 2em; color: #E02365"></i>
+							</f:facet>
+							<f:facet name="complete">
+								<h:outputText value="" />
+							</f:facet>
+						</p:ajaxStatus>
+					</h:panelGrid>
+				</div>
+			</div>
+			<p:panel id="dashBoardPanelView" style="margin-bottom:20px">
+				<f:facet name="header">
+					<i class="pi pi-chart-bar"></i> Vista de reportes
+			    </f:facet>
+				<h:panelGrid columns="1" cellpadding="10"
+					rendered="#{not empty mainBean.embbededDashboardData}">
+					<iframe src="#{mainBean.embbededDashboardData}" width="100%"
+						height="60%" style="border: 0px" />
+				</h:panelGrid>
+				<h:panelGrid columns="1" cellpadding="10"
+					rendered="#{empty mainBean.embbededDashboardData}">
+					<p:staticMessage severity="info" summary="INFO!"
+						detail="No existen datos disponibles para analizar" />
+				</h:panelGrid>
+
+			</p:panel>
+
+		</h:form>
+
+
 	</h:body>
 </f:view>

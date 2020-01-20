@@ -2,8 +2,8 @@
 
 <portlet-app xmlns="http://java.sun.com/xml/ns/portlet/portlet-app_2_0.xsd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://java.sun.com/xml/ns/portlet/portlet-app_2_0.xsd http://java.sun.com/xml/ns/portlet/portlet-app_2_0.xsd" version="2.0">
 	<portlet>
-		<portlet-name>com.mycompany.my.primefaces.portlet</portlet-name>
-		<display-name>com.mycompany.my.primefaces.portlet</display-name>
+		<portlet-name>quicksight.portlet</portlet-name>
+		<display-name>QuickSight DashBoard</display-name>
 		<portlet-class>javax.portlet.faces.GenericFacesPortlet</portlet-class>
 		<init-param>
 			<name>javax.portlet.faces.defaultViewId.view</name>
@@ -16,7 +16,7 @@
 		<portlet-info>
 			<title>QuickSight DashBoard</title>
 			<short-title>QuickSight Dashboard embeded</short-title>
-			<keywords>com.mycompany.my.primefaces.portlet</keywords>
+			<keywords>quicksight.portlet</keywords>
 		</portlet-info>
 		<security-role-ref>
 			<role-name>administrator</role-name>
