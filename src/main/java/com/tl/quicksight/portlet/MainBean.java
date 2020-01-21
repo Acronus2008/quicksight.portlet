@@ -37,7 +37,7 @@ public class MainBean {
     public void loadDashboardData() {
     	try {
 			quickSightHandler = new QuickSightHandler();
-			GetDashboardEmbedUrlResult dashboardEmbedUrlResult = quickSightHandler.getQuickSightDashboardUrl(dashboardId, awsAccountId, accessKey, secretKey);
+			GetDashboardEmbedUrlResult dashboardEmbedUrlResult = quickSightHandler.getQuickSightDashboardUrl(dashBoardSelected, awsAccountId, accessKey, secretKey);
 			embbededDashboardData = dashboardEmbedUrlResult.getEmbedUrl();
 		} catch (Exception e) {
 			System.out.println(String.format("Error %s : Al parecer estas intentando obtener el dashboard cuando estas en plan QuickSight Standard -> %s", "MainBean -> getEmbbededUrl()", e.getMessage()));
