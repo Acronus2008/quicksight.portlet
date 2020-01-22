@@ -17,10 +17,9 @@ public class MainBean {
 	
 	private QuickSightHandler quickSightHandler;
 	
-	private final String dashboardId = "3d566df0-d3a8-47b5-a98e-3a9401117da1";
-	private final String awsAccountId = "472925736224";
-	private final String accessKey = "AKIAW4HESBUQPQQEWORE";
-	private final String secretKey = "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";
+	private final String awsAccountId = "957370209474";
+	private final String accessKey = "";
+	private final String secretKey = "";
 	
 	
 	private List<DashboardData> dashboards;
@@ -29,9 +28,9 @@ public class MainBean {
     
     public MainBean() {
     	dashboards = new ArrayList<>();
-    	dashboards.add(new DashboardData(DashboardType.DASHBOARD_1.value().toString(), "3d566df0-d3a8-47b5-a98e-3a9401117da1"));
-    	dashboards.add(new DashboardData(DashboardType.DASHBOARD_2.value().toString(), "3d566df0-d3a8-47b5-a98e-111111111111"));
-    	dashboards.add(new DashboardData(DashboardType.DASHBOARD_3.value().toString(), "3d566df0-d3a8-47b5-a98e-222222222222"));
+    	dashboards.add(new DashboardData(DashboardType.DASHBOARD_1.value().toString(), "f1149dd9-68a3-4746-9f40-fa8bca60aa3b"));
+    	dashboards.add(new DashboardData(DashboardType.DASHBOARD_2.value().toString(), "07a53ba4-bbfa-4bdf-b267-e6f32c834c96"));
+    	dashboards.add(new DashboardData(DashboardType.DASHBOARD_3.value().toString(), "f0a33858-8dd5-416e-94fa-317ffa382e69"));
 	}
     
     public void loadDashboardData() {
