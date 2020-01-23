@@ -6,8 +6,6 @@ import java.util.List;
 import javax.faces.bean.ManagedBean;
 import javax.faces.view.ViewScoped;
 
-import org.apache.http.impl.client.SystemDefaultCredentialsProvider;
-
 import com.amazonaws.services.quicksight.model.GetDashboardEmbedUrlResult;
 import com.tl.quicksight.portlet.aws.quicksight.QuickSightHandler;
 import com.tl.quicksight.portlet.dashboard.DashboardData;
