@@ -2,13 +2,13 @@ package com.tl.quicksight.portlet.dashboard;
 
 public class DashboardData {
 	private String dashboardType;
+	private String dashboardId;
+	
 	public DashboardData(String dashboardType, String dashboardId) {
 		super();
-		this.dashboardType = dashboardType;
-		this.dashboardId = dashboardId;
-	}
-
-	private String dashboardId;
+		setDashboardType(dashboardType);
+		setDashboardId(dashboardId);
+	}	
 	
 	public DashboardData() {
 		super();
@@ -18,15 +18,16 @@ public class DashboardData {
 	public String getDashboardId() {
 		return dashboardId;
 	}
-	public void setDashboardId(String dashboardId) {
-		this.dashboardId = dashboardId;
-	}
 
 	public String getDashboardType() {
 		return dashboardType;
 	}
 
-	public void setDashboardType(String dashboardType) {
+	private void setDashboardId(String dashboardId) {
+		this.dashboardId = dashboardId;
+	}
+	
+	private void setDashboardType(String dashboardType) {
 		this.dashboardType = dashboardType;
 	}
 	

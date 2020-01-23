@@ -6,6 +6,8 @@ import java.util.List;
 import javax.faces.bean.ManagedBean;
 import javax.faces.view.ViewScoped;
 
+import org.apache.http.impl.client.SystemDefaultCredentialsProvider;
+
 import com.amazonaws.services.quicksight.model.GetDashboardEmbedUrlResult;
 import com.tl.quicksight.portlet.aws.quicksight.QuickSightHandler;
 import com.tl.quicksight.portlet.dashboard.DashboardData;
@@ -38,6 +40,7 @@ public class MainBean {
 			quickSightHandler = new QuickSightHandler();
 			GetDashboardEmbedUrlResult dashboardEmbedUrlResult = quickSightHandler.getQuickSightDashboardUrl(dashBoardSelected, awsAccountId, accessKey, secretKey);
 			embbededDashboardData = dashboardEmbedUrlResult.getEmbedUrl();
+			System.out.println(embbededDashboardData);
 		} catch (Exception e) {
 			System.out.println(String.format("Error %s : Al parecer estas intentando obtener el dashboard cuando estas en plan QuickSight Standard -> %s", "MainBean -> getEmbbededUrl()", e.getMessage()));
 		}

@@ -20,7 +20,7 @@ public class AwsUtil {
   	  	
   	  return AmazonQuickSightClientBuilder
   			  .standard()
-  			  .withRegion(Regions.EU_WEST_2.getName())
+  			  .withRegion(Regions.EU_CENTRAL_1.getName())
   			  .withCredentials(credentialsProvider)
   			  .build();
   	  }
