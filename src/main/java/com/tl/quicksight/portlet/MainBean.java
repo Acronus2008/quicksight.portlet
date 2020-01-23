@@ -20,8 +20,8 @@ public class MainBean {
 	private QuickSightHandler quickSightHandler;
 	
 	private final String awsAccountId = "957370209474";
-	private final String accessKey = "";
-	private final String secretKey = "";
+	private final String accessKey = "AKIA55Z5WCTBNGZ5CV5X";
+	private final String secretKey = "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";
 	
 	
 	private List<DashboardData> dashboards;
